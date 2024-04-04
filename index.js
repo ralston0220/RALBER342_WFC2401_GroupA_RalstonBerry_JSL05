@@ -54,3 +54,10 @@ const playlists = Object.entries(guardians).map(([guardian, genre]) => {
             return playlistElement;
         });
     
+     // Append playlists to the playlists container
+        const playlistsContainer = document.getElementById("playlists");
+        playlists.forEach(playlist => playlistsContainer.appendChild(playlist));
+    }
+    
+    // Call generatePlaylist and display the playlists for each Guardian
+    generatePlaylist(guardians, songs);
