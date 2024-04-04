@@ -40,24 +40,25 @@ function generatePlaylist(guardians, songs) {
 const playlists = Object.entries(guardians).map(([guardian, genre]) => {
  // This line filters the songs array to only include songs that match the genre of the current guardian.
          const playlistSongs = songs.filter(song => song.genre === genre);
-            // this line creates the playlist div and displays ` guardians name + playlist`
-            const playlistElement = document.createElement("div");
-            playlistElement.classList.add("playlist");
-            playlistElement.innerHTML = `<h2>${guardian}'s Playlist</h2>`;                                     
+ // this line creates the playlist div and displays ` guardians name + playlist`
+         const playlistElement = document.createElement("div");
+         playlistElement.classList.add("playlist");
+         playlistElement.innerHTML = `<h2>${guardian}'s Playlist</h2>`;                                     
  // here a div is created for each song and inside the artist name and song title is displayed
-            playlistSongs.forEach(song => {
+         playlistSongs.forEach(song => {
                 const songElement = document.createElement("div");
                 songElement.classList.add("song");
                 songElement.innerHTML = `<span class="song-title">${song.title}</span> by ${song.artist}`;
                 playlistElement.appendChild(songElement);
-  });
+            });
             return playlistElement;
         });
+
+    
     
      // Append playlists to the playlists container
         const playlistsContainer = document.getElementById("playlists");
         playlists.forEach(playlist => playlistsContainer.appendChild(playlist));
     }
-    
     // Call generatePlaylist and display the playlists for each Guardian
     generatePlaylist(guardians, songs);
