@@ -19,3 +19,14 @@ const songs = [
     { title: "Let Me Love You", artist: "Mario", genre: "R&B" },
     // Feel free to add even more songs
 ];
+
+// Object containing each Guardian's preferred genre
+const guardians = {
+    "Star-Lord": "Rock",
+    "Gamora": "Pop",
+    // added the preferences for Drax, Rocket and Groot
+    "Drax": "Rock",
+    "Rocket": "Pop",
+    "Groot": "Rock",
+    
+};
