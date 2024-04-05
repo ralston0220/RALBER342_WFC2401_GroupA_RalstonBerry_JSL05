@@ -1,64 +1,58 @@
-// Array of song objects. Add at least 5 songs with title, artist, and genre properties.
-const songs = [
-    { title: "Hooked on a Feeling", artist: "Blue Swede", genre: "Pop" },
-    { title: "Moonage Daydream", artist: "David Bowie", genre: "Rock" },
-    { title: "I Want You Back", artist: "The Jackson 5", genre: "Pop" },
-    { title: "Spirit in the Sky", artist: "Norman Greenbaum", genre: "Rock" },
-    { title: "Cherry Bomb", artist: "The Runaways", genre: "Rock" },
-    { title: "Escape (The Piña Colada Song)", artist: "Rupert Holmes", genre: "Pop" },
-    { title: "O-O-H Child", artist: "The Five Stairsteps", genre: "R&B" },
-    { title: "Ain't No Mountain High Enough", artist: "Marvin Gaye & Tammi Terrell", genre: "R&B" },
-    { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
-    { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
-    { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
-    // Added 5 new songs for the playlists
-    { title: "Billie Jean", artist: "Michael Jackson", genre: "Pop" },
-    { title: "Bohemian Rhapsody", artist: "Queen", genre: "Rock" },
-    { title: "Umbrella", artist: "Rihanna", genre: "Pop" },
-    { title: "All Of Me", artist: "John Legend", genre: "R&B" },
-    { title: "Let Me Love You", artist: "Mario", genre: "R&B" },
-    // Feel free to add even more songs
-];
-
-// Object containing each Guardian's preferred genre
-const guardians = {
-    "Star-Lord": "Rock",
-    "Gamora": "Pop",
-    // added the preferences for Drax, Rocket and Groot
-    "Drax": "Rock",
-    "Rocket": "Pop",
-    "Groot": "Rock",
-    
+// Sample menu data (Consider fetching this data from a server in a real-world scenario)
+const menu = {
+    Starters: ["Garlic Bread", "Bruschetta"],
+    MainCourses: ["Margherita Pizza", "Spaghetti Carbonara"],
+    Desserts: ["Tiramisu", "Cheesecake"]
 };
 
-// Function to generate playlist based on preferred genre
-function generatePlaylist(guardians, songs) {
-    // Use the map() function to create playlists for each Guardian
-    // Your code here
+// Function to display menu items by category
+function displayMenuItems(menu) {
+    // Get the menu container element from the HTML
 
-// this code converts guardian object into an array and map iterates over each entry
-const playlists = Object.entries(guardians).map(([guardian, genre]) => {
- // This line filters the songs array to only include songs that match the genre of the current guardian.
-         const playlistSongs = songs.filter(song => song.genre === genre);
- // this line creates the playlist div and displays ` guardians name + playlist`
-         const playlistElement = document.createElement("div");
-         playlistElement.classList.add("playlist");
-         playlistElement.innerHTML = `<h2>${guardian}'s Playlist</h2>`;                                     
- // here a div is created for each song and inside the artist name and song title is displayed
-         playlistSongs.forEach(song => {
-                const songElement = document.createElement("div");
-                songElement.classList.add("song");
-                songElement.innerHTML = `<span class="song-title">${song.title}</span> by ${song.artist}`;
-                playlistElement.appendChild(songElement);
-            });
-            return playlistElement;
-        });
+    // Loop through each category and its items in the menu object
 
-    
-    
-     // Append playlists to the playlists container
-        const playlistsContainer = document.getElementById("playlists");
-        playlists.forEach(playlist => playlistsContainer.appendChild(playlist));
-    }
-    // Call generatePlaylist and display the playlists for each Guardian
-    generatePlaylist(guardians, songs);
+        // Create an element to represent the category
+
+        // Set the text content of the category element to the category name
+
+        // Append the category element to the menu container
+
+        // Create an element to represent a list of items
+
+        // Append a list of items element to the menu container
+
+        // Loop through the items in the category and create list items
+
+            // Create a list item element
+
+            // Set the text content of the list item element to the item name
+
+            // Attach a click event listener to the list item to add it to the order
+
+            // Append the list item to the list of items
+
+            
+}
+
+// Callback function for adding an item to the order
+function addToOrder(itemName) {
+    // Get the order items list and the order total element from the HTML
+
+    // Create a list item for the order
+
+    // Set the text content of the list item to the item name
+
+    // Append the list item to the order items list
+
+    // Calculate and update the total price
+
+    // Update the text content of the order total element with the new total
+}
+
+// Function to initialize the menu system
+function initMenuSystem(menu) {
+    // Call the function to display menu items
+}
+
+// Start the menu system by calling the init function
+initMenuSystem(menu);
