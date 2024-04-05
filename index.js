@@ -51,6 +51,10 @@ const playlists = Object.entries(guardians).map(([guardian, genre]) => {
                 songElement.classList.add("song");
                 songElement.innerHTML = `<span class="song-title">${song.title}</span> by ${song.artist}`;
                 playlistElement.appendChild(songElement);
+ });
+        return playlistElement;
+    });
+
 
 // Call generatePlaylist and display the playlists for each Guardian
 generatePlaylist(guardians, songs);
