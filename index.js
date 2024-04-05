@@ -11,6 +11,12 @@ const songs = [
     { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
+    // Added 5 new songs for the playlists
+    { title: "Billie Jean", artist: "Michael Jackson", genre: "Pop" },
+    { title: "Bohemian Rhapsody", artist: "Queen", genre: "Rock" },
+    { title: "Umbrella", artist: "Rihanna", genre: "Pop" },
+    { title: "All Of Me", artist: "John Legend", genre: "R&B" },
+    { title: "Let Me Love You", artist: "Mario", genre: "R&B" },
     // Feel free to add even more songs
 ];
 
